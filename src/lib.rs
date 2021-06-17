@@ -1,6 +1,7 @@
 use lib_simulation as sim;
 use rand::prelude::*;
 use wasm_bindgen::prelude::*;
+use world::World;
 
 mod animal;
 mod world;
@@ -19,5 +20,9 @@ impl Simulation {
         let sim = sim::Simulation::random(&mut rng);
 
         Self { rng, sim }
+    }
+
+    pub fn world(&self) -> World {
+        World::from(self.sim.world())
     }
 }
