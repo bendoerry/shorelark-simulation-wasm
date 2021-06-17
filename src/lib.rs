@@ -2,6 +2,9 @@ use lib_simulation as sim;
 use rand::prelude::*;
 use wasm_bindgen::prelude::*;
 
+mod animal;
+mod world;
+
 #[wasm_bindgen]
 pub struct Simulation {
     rng: ThreadRng,
