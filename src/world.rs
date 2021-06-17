@@ -1,10 +1,8 @@
 use lib_simulation as sim;
-use wasm_bindgen::prelude::*;
 
 use crate::animal::Animal;
 
-#[wasm_bindgen]
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, serde::Serialize)]
 pub struct World {
     pub animals: Vec<Animal>,
 }

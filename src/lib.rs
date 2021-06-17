@@ -22,7 +22,8 @@ impl Simulation {
         Self { rng, sim }
     }
 
-    pub fn world(&self) -> World {
-        World::from(self.sim.world())
+    pub fn world(&self) -> JsValue {
+        let world = World::from(self.sim.world());
+        JsValue::from_serde(&world).unwrap()
     }
 }
