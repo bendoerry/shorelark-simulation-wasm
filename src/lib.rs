@@ -4,6 +4,7 @@ use wasm_bindgen::prelude::*;
 use world::World;
 
 mod animal;
+mod food;
 mod world;
 
 #[wasm_bindgen]
